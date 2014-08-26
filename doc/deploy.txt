@@ -76,10 +76,12 @@ $ git push prod master
 ### WEB HOOKS
 # cd /var/www/deploy
 # git remote add origin https://github.com/xteamleader/deploy.git
-
+# chown -R nginx:nginx /var/www/deploy
 update.php
 <?php
 ini_set('error_log','/var/log/php_error.log');
 $app_foler = '/var/www/adge_middleware';
 echo shell_exec(" cd $destination_folder && /usr/bin/git pull -u origin master 2>&1 ");
 ?>
+
+### FINAL

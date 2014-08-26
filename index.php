@@ -1,3 +1,3 @@
 <?php
-echo "Hello, Everyone\r\n";
+echo "Hello, Everyone<br />";
 echo date('Y-m-d H:i:s',time());

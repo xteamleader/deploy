@@ -6,6 +6,7 @@ http://wulijun.github.io/php-the-right-way/
 
 http://www.ooso.net/archives/596
 
+#### On webserver
 # yum install git-core
 # nano ~/.gitconfig //create an empty file
 # git config --global user.name "xteamleader"
@@ -18,3 +19,18 @@ user.email=recky@kaxmedia.com
 # mkdir deploy.git && cd deploy.git
 # git init --bare
 Initialized empty Git repository in /var/repo/deploy.git/
+# cd /var/repo/deploy.git/hooks
+# cat > post-receive
+#!/bin/sh
+git --work-tree=/var/www/html --git-dir=/var/repo/deploy.git checkout -f
+# control-d
+# chmod +x post-receive
+
+
+#### Local machine : Windows
+cd D:\workstation\devroot\github\deploy
+git remote add live ssh://root@192.168.1.200/var/repo/deploy.git
+git add .
+git commit -m "My Project is ready"
+git push live master
+#### Now, any code changed in your IDE, once you push to server, it will automatically deployed to webserver /var/www/html

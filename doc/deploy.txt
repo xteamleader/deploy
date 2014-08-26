@@ -6,6 +6,8 @@ http://wulijun.github.io/php-the-right-way/
 
 http://www.ooso.net/archives/596
 
+http://yuguo.us/weblog/push-git-repository-to-server/
+
 #### On webserver
 # yum install git-core
 # nano ~/.gitconfig //create an empty file
@@ -34,3 +36,7 @@ git add .
 git commit -m "My Project is ready"
 git push live master
 #### Now, any code changed in your IDE, once you push to server, it will automatically deployed to webserver /var/www/html
+
+TIPS: push to prod server directly from local machine
+$ git remote add prod your-ssh-username@your-host:/var/www/yoursite/.git
+$ git push prod master

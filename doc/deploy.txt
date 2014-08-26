@@ -1,0 +1,20 @@
+https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps
+
+https://gist.github.com/oodavid/1809044
+
+http://wulijun.github.io/php-the-right-way/
+
+http://www.ooso.net/archives/596
+
+# yum install git-core
+# nano ~/.gitconfig //create an empty file
+# git config --global user.name "xteamleader"
+# git config --global user.email "recky@kaxmedia.com"
+# git config --list
+user.name=xteamleader
+user.email=recky@kaxmedia.com
+# cd /var
+# mkdir repo && cd repo
+# mkdir deploy.git && cd deploy.git
+# git init --bare
+Initialized empty Git repository in /var/repo/deploy.git/

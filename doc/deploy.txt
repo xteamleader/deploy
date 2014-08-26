@@ -8,6 +8,24 @@ http://www.ooso.net/archives/596
 
 http://yuguo.us/weblog/push-git-repository-to-server/
 
+http://www.fancycoding.com/automatic-deploy-task-using-github-hooks/
+
+https://github.com/qiniu/webhook
+
+http://ued.ctrip.com/blog/?p=3646
+
+http://jekyllcn.com/docs/deployment-methods/
+
+http://waylybaye.com/post/41
+
+http://imxylz.com/blog/2013/11/27/build-octopress-with-github-hook/
+
+http://yanjunyi.com/blog/posts/automated-deployment-to-dreamhost-by-bitbucket-post-hook.html
+
+http://www.cnblogs.com/samren/archive/2012/06/09/2543111.html
+
+http://fourword.fourkitchens.com/article/trigger-jenkins-builds-pushing-github
+
 #### On webserver
 # yum install git-core
 # nano ~/.gitconfig //create an empty file
@@ -36,6 +54,11 @@ git --work-tree=/var/www/html --git-dir=/var/repo/deploy.git checkout -f
 ## choose no passphrase
 # cat /var/www/.ssh/id_rsa.pub
 ## copy string to github
+# eval `ssh-agent -s`
+# ssh-add /var/repo/.ssh/id_rsa
+# ssh -T git@github.com
+
+
 
 #### Local machine : Windows
 cd D:\workstation\devroot\github\deploy
